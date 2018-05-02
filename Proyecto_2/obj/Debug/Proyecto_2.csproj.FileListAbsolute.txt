@@ -1,0 +1,10 @@
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.exe.config
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.exe
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.pdb
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csprojResolveAssemblyReference.cache
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.Properties.Resources.resources
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csproj.GenerateResource.cache
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csproj.CoreCompileInputs.cache
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.exe
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.pdb
+c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.MainWindow.resources
