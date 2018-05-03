@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.TimeLBL = new System.Windows.Forms.Label();
             this.PlayBTN = new System.Windows.Forms.Button();
             this.EcualizatorBTN = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.SearchBTN = new System.Windows.Forms.Button();
             this.SearchBAR = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.ShareBTN = new System.Windows.Forms.Button();
             this.AlbumLBL = new System.Windows.Forms.Label();
             this.PageFRM = new System.Windows.Forms.PictureBox();
@@ -54,8 +56,7 @@
             this.CloseBTN = new System.Windows.Forms.Button();
             this.MinimizeBTN = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ScrollbarDER = new System.Windows.Forms.VScrollBar();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Arrow3)).BeginInit();
@@ -81,6 +82,14 @@
             this.panel1.Size = new System.Drawing.Size(833, 189);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(101, 102);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 17);
+            this.panel7.TabIndex = 7;
             // 
             // TimeLBL
             // 
@@ -163,18 +172,19 @@
             // 
             // AlbumesBTN
             // 
+            this.AlbumesBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
             this.AlbumesBTN.FlatAppearance.BorderSize = 0;
             this.AlbumesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AlbumesBTN.Font = new System.Drawing.Font("Calibri", 22F, System.Drawing.FontStyle.Italic);
+            this.AlbumesBTN.Font = new System.Drawing.Font("hooge 05_55", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlbumesBTN.ForeColor = System.Drawing.Color.White;
             this.AlbumesBTN.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.AlbumesBTN.Location = new System.Drawing.Point(44, 190);
             this.AlbumesBTN.Name = "AlbumesBTN";
-            this.AlbumesBTN.Size = new System.Drawing.Size(181, 47);
+            this.AlbumesBTN.Size = new System.Drawing.Size(215, 47);
             this.AlbumesBTN.TabIndex = 11;
             this.AlbumesBTN.Text = "Albumes";
             this.AlbumesBTN.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.AlbumesBTN.UseVisualStyleBackColor = true;
+            this.AlbumesBTN.UseVisualStyleBackColor = false;
             // 
             // Arrow2
             // 
@@ -188,18 +198,19 @@
             // 
             // ArtistasBTN
             // 
+            this.ArtistasBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
             this.ArtistasBTN.FlatAppearance.BorderSize = 0;
             this.ArtistasBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ArtistasBTN.Font = new System.Drawing.Font("Calibri", 22F, System.Drawing.FontStyle.Italic);
+            this.ArtistasBTN.Font = new System.Drawing.Font("hooge 05_55", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArtistasBTN.ForeColor = System.Drawing.Color.White;
             this.ArtistasBTN.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.ArtistasBTN.Location = new System.Drawing.Point(44, 109);
             this.ArtistasBTN.Name = "ArtistasBTN";
-            this.ArtistasBTN.Size = new System.Drawing.Size(181, 47);
+            this.ArtistasBTN.Size = new System.Drawing.Size(215, 47);
             this.ArtistasBTN.TabIndex = 9;
             this.ArtistasBTN.Text = "Artistas";
             this.ArtistasBTN.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ArtistasBTN.UseVisualStyleBackColor = true;
+            this.ArtistasBTN.UseVisualStyleBackColor = false;
             this.ArtistasBTN.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Arrow1
@@ -214,18 +225,19 @@
             // 
             // CancionesBTN
             // 
+            this.CancionesBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
             this.CancionesBTN.FlatAppearance.BorderSize = 0;
             this.CancionesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancionesBTN.Font = new System.Drawing.Font("Calibri", 22F, System.Drawing.FontStyle.Italic);
+            this.CancionesBTN.Font = new System.Drawing.Font("hooge 05_55", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancionesBTN.ForeColor = System.Drawing.Color.White;
             this.CancionesBTN.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.CancionesBTN.Location = new System.Drawing.Point(44, 26);
             this.CancionesBTN.Name = "CancionesBTN";
-            this.CancionesBTN.Size = new System.Drawing.Size(181, 47);
+            this.CancionesBTN.Size = new System.Drawing.Size(215, 47);
             this.CancionesBTN.TabIndex = 0;
             this.CancionesBTN.Text = "Canciones";
             this.CancionesBTN.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CancionesBTN.UseVisualStyleBackColor = true;
+            this.CancionesBTN.UseVisualStyleBackColor = false;
             // 
             // SearchBTN
             // 
@@ -258,6 +270,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.ShareBTN);
             this.panel4.Controls.Add(this.AlbumLBL);
             this.panel4.Controls.Add(this.PageFRM);
@@ -270,10 +283,24 @@
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(57, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 37);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ShareBTN
             // 
             this.ShareBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShareBTN.BackgroundImage")));
             this.ShareBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ShareBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShareBTN.FlatAppearance.BorderSize = 0;
             this.ShareBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShareBTN.Location = new System.Drawing.Point(12, 114);
@@ -376,21 +403,12 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ScrollbarDER
+            // vScrollBar1
             // 
-            this.ScrollbarDER.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ScrollbarDER.Location = new System.Drawing.Point(1076, 24);
-            this.ScrollbarDER.Name = "ScrollbarDER";
-            this.ScrollbarDER.Size = new System.Drawing.Size(16, 380);
-            this.ScrollbarDER.TabIndex = 6;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel7.Location = new System.Drawing.Point(101, 102);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 17);
-            this.panel7.TabIndex = 7;
+            this.vScrollBar1.Location = new System.Drawing.Point(1075, 24);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 380);
+            this.vScrollBar1.TabIndex = 6;
             // 
             // MainWindow
             // 
@@ -399,7 +417,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1092, 593);
-            this.Controls.Add(this.ScrollbarDER);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MinimizeBTN);
             this.Controls.Add(this.CloseBTN);
@@ -443,7 +461,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button ShareBTN;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.VScrollBar ScrollbarDER;
         private System.Windows.Forms.TextBox SearchBAR;
         private System.Windows.Forms.Button SearchBTN;
         private System.Windows.Forms.Button CancionesBTN;
@@ -457,6 +474,8 @@
         private System.Windows.Forms.Button PlayBTN;
         private System.Windows.Forms.Label TimeLBL;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
 

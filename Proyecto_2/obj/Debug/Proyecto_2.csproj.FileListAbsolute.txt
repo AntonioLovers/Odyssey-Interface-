@@ -8,3 +8,4 @@ c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csproj.Co
 c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.exe
 c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.pdb
 c:\users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.MainWindow.resources
+C:\Users\dcama\source\repos\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.src.View.Login.resources

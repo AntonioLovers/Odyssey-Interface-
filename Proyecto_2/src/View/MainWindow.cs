@@ -12,6 +12,7 @@ namespace Proyecto_2
 {
     public partial class MainWindow : Form
     {
+        Boolean scrolling = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -82,6 +83,10 @@ namespace Proyecto_2
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void scrollPNL_Paint(object sender, PaintEventArgs e)
         {
 
         }
