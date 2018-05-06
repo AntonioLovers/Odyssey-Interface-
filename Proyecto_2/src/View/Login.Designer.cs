@@ -40,8 +40,8 @@
             this.LogBTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CloseBTN = new System.Windows.Forms.Button();
             this.MinimizeBTN = new System.Windows.Forms.Button();
+            this.CloseBTN = new System.Windows.Forms.Button();
             this.RegisterBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoLBL)).BeginInit();
             this.panel1.SuspendLayout();
@@ -72,26 +72,37 @@
             // 
             // UsernameTXTB
             // 
+            this.UsernameTXTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UsernameTXTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTXTB.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.UsernameTXTB.ForeColor = System.Drawing.Color.White;
             this.UsernameTXTB.Location = new System.Drawing.Point(154, 263);
             this.UsernameTXTB.Name = "UsernameTXTB";
-            this.UsernameTXTB.Size = new System.Drawing.Size(106, 24);
+            this.UsernameTXTB.Size = new System.Drawing.Size(106, 17);
             this.UsernameTXTB.TabIndex = 2;
+            this.UsernameTXTB.TextChanged += new System.EventHandler(this.UsernameTXTB_TextChanged);
             // 
             // PasswordTXTB
             // 
+            this.PasswordTXTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PasswordTXTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTXTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTXTB.ForeColor = System.Drawing.Color.White;
             this.PasswordTXTB.Location = new System.Drawing.Point(154, 307);
             this.PasswordTXTB.Name = "PasswordTXTB";
-            this.PasswordTXTB.Size = new System.Drawing.Size(106, 23);
+            this.PasswordTXTB.Size = new System.Drawing.Size(106, 16);
             this.PasswordTXTB.TabIndex = 3;
+            this.PasswordTXTB.UseSystemPasswordChar = true;
             // 
             // IPTXTB
             // 
+            this.IPTXTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.IPTXTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.IPTXTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IPTXTB.ForeColor = System.Drawing.Color.White;
             this.IPTXTB.Location = new System.Drawing.Point(154, 355);
             this.IPTXTB.Name = "IPTXTB";
-            this.IPTXTB.Size = new System.Drawing.Size(106, 23);
+            this.IPTXTB.Size = new System.Drawing.Size(106, 16);
             this.IPTXTB.TabIndex = 4;
             // 
             // UsernameLBL
@@ -140,6 +151,7 @@
             this.LogBTN.TabIndex = 8;
             this.LogBTN.Text = "LOG IN!";
             this.LogBTN.UseVisualStyleBackColor = false;
+            this.LogBTN.Click += new System.EventHandler(this.LogBTN_Click);
             // 
             // label1
             // 
@@ -163,23 +175,6 @@
             this.panel1.Size = new System.Drawing.Size(321, 21);
             this.panel1.TabIndex = 10;
             // 
-            // CloseBTN
-            // 
-            this.CloseBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CloseBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CloseBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBTN.FlatAppearance.BorderSize = 0;
-            this.CloseBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseBTN.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseBTN.ForeColor = System.Drawing.Color.Black;
-            this.CloseBTN.Location = new System.Drawing.Point(291, -3);
-            this.CloseBTN.Name = "CloseBTN";
-            this.CloseBTN.Size = new System.Drawing.Size(30, 24);
-            this.CloseBTN.TabIndex = 5;
-            this.CloseBTN.Text = "X";
-            this.CloseBTN.UseVisualStyleBackColor = false;
-            this.CloseBTN.Click += new System.EventHandler(this.CloseBTN_Click);
-            // 
             // MinimizeBTN
             // 
             this.MinimizeBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -197,6 +192,23 @@
             this.MinimizeBTN.TabIndex = 6;
             this.MinimizeBTN.UseVisualStyleBackColor = false;
             this.MinimizeBTN.Click += new System.EventHandler(this.MinimizeBTN_Click);
+            // 
+            // CloseBTN
+            // 
+            this.CloseBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CloseBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CloseBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBTN.FlatAppearance.BorderSize = 0;
+            this.CloseBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseBTN.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseBTN.ForeColor = System.Drawing.Color.Black;
+            this.CloseBTN.Location = new System.Drawing.Point(291, -3);
+            this.CloseBTN.Name = "CloseBTN";
+            this.CloseBTN.Size = new System.Drawing.Size(30, 24);
+            this.CloseBTN.TabIndex = 5;
+            this.CloseBTN.Text = "X";
+            this.CloseBTN.UseVisualStyleBackColor = false;
+            this.CloseBTN.Click += new System.EventHandler(this.CloseBTN_Click);
             // 
             // RegisterBTN
             // 

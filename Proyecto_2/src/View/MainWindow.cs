@@ -90,5 +90,10 @@ namespace Proyecto_2
         {
 
         }
+
+        private void PageFRM_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

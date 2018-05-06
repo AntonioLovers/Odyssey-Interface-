@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_2.src.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
 
 namespace Proyecto_2.src.View
 {
@@ -45,6 +48,16 @@ namespace Proyecto_2.src.View
         private void MinimizeBTN_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void UsernameTXTB_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void LogBTN_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

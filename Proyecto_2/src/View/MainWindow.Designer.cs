@@ -329,6 +329,7 @@
             this.PageFRM.Size = new System.Drawing.Size(80, 80);
             this.PageFRM.TabIndex = 0;
             this.PageFRM.TabStop = false;
+            this.PageFRM.Click += new System.EventHandler(this.PageFRM_Click);
             // 
             // CancionLBL
             // 
