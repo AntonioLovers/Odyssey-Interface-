@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Proyecto_2.src.Controller;
+using Proyecto_2.src.View;
+using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Proyecto_2
@@ -11,9 +14,15 @@ namespace Proyecto_2
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new src.View.Form1());
+            Gestor gestor = new Gestor();
+            gestor.showLogin();
+            Application.Run();
+            
+
+
         }
     }
 }

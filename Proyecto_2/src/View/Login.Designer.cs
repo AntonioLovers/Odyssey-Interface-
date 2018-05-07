@@ -33,12 +33,10 @@
             this.LogoLBL = new System.Windows.Forms.PictureBox();
             this.UsernameTXTB = new System.Windows.Forms.TextBox();
             this.PasswordTXTB = new System.Windows.Forms.TextBox();
-            this.IPTXTB = new System.Windows.Forms.TextBox();
             this.UsernameLBL = new System.Windows.Forms.Label();
             this.PasswordLBL = new System.Windows.Forms.Label();
-            this.IPLBL = new System.Windows.Forms.Label();
+            this.PopLBL = new System.Windows.Forms.Label();
             this.LogBTN = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MinimizeBTN = new System.Windows.Forms.Button();
             this.CloseBTN = new System.Windows.Forms.Button();
@@ -94,17 +92,6 @@
             this.PasswordTXTB.TabIndex = 3;
             this.PasswordTXTB.UseSystemPasswordChar = true;
             // 
-            // IPTXTB
-            // 
-            this.IPTXTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.IPTXTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.IPTXTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IPTXTB.ForeColor = System.Drawing.Color.White;
-            this.IPTXTB.Location = new System.Drawing.Point(154, 355);
-            this.IPTXTB.Name = "IPTXTB";
-            this.IPTXTB.Size = new System.Drawing.Size(106, 16);
-            this.IPTXTB.TabIndex = 4;
-            // 
             // UsernameLBL
             // 
             this.UsernameLBL.AutoSize = true;
@@ -127,16 +114,15 @@
             this.PasswordLBL.TabIndex = 6;
             this.PasswordLBL.Text = "Password:";
             // 
-            // IPLBL
+            // PopLBL
             // 
-            this.IPLBL.AutoSize = true;
-            this.IPLBL.Font = new System.Drawing.Font("hooge 05_55", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IPLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
-            this.IPLBL.Location = new System.Drawing.Point(100, 353);
-            this.IPLBL.Name = "IPLBL";
-            this.IPLBL.Size = new System.Drawing.Size(27, 20);
-            this.IPLBL.TabIndex = 7;
-            this.IPLBL.Text = "IP:";
+            this.PopLBL.AutoSize = true;
+            this.PopLBL.Font = new System.Drawing.Font("hooge 05_55", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
+            this.PopLBL.Location = new System.Drawing.Point(32, 351);
+            this.PopLBL.Name = "PopLBL";
+            this.PopLBL.Size = new System.Drawing.Size(0, 25);
+            this.PopLBL.TabIndex = 7;
             // 
             // LogBTN
             // 
@@ -152,17 +138,6 @@
             this.LogBTN.Text = "LOG IN!";
             this.LogBTN.UseVisualStyleBackColor = false;
             this.LogBTN.Click += new System.EventHandler(this.LogBTN_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("hooge 05_55", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(32, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel1
             // 
@@ -233,12 +208,10 @@
             this.ClientSize = new System.Drawing.Size(321, 498);
             this.Controls.Add(this.RegisterBTN);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.LogBTN);
-            this.Controls.Add(this.IPLBL);
+            this.Controls.Add(this.PopLBL);
             this.Controls.Add(this.PasswordLBL);
             this.Controls.Add(this.UsernameLBL);
-            this.Controls.Add(this.IPTXTB);
             this.Controls.Add(this.PasswordTXTB);
             this.Controls.Add(this.UsernameTXTB);
             this.Controls.Add(this.LogoLBL);
@@ -261,12 +234,10 @@
         private System.Windows.Forms.PictureBox LogoLBL;
         private System.Windows.Forms.TextBox UsernameTXTB;
         private System.Windows.Forms.TextBox PasswordTXTB;
-        private System.Windows.Forms.TextBox IPTXTB;
         private System.Windows.Forms.Label UsernameLBL;
         private System.Windows.Forms.Label PasswordLBL;
-        private System.Windows.Forms.Label IPLBL;
+        private System.Windows.Forms.Label PopLBL;
         private System.Windows.Forms.Button LogBTN;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button CloseBTN;
         private System.Windows.Forms.Button MinimizeBTN;

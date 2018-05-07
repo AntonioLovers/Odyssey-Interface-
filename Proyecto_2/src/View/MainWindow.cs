@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_2.src.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Proyecto_2
 {
     public partial class MainWindow : Form
     {
-        Boolean scrolling = false;
-        public MainWindow()
+        private Boolean scrolling = false;
+        private Gestor gestor;
+        public MainWindow(Gestor gest)
         {
+            this.gestor = gest;
             InitializeComponent();
         }
 
@@ -64,7 +67,9 @@ namespace Proyecto_2
         }
         private void CloseBTN_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            gestor.Stop();
+            
         }
 
         private void MinimizeBTN_Click(object sender, EventArgs e)
@@ -92,6 +97,11 @@ namespace Proyecto_2
         }
 
         private void PageFRM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancionesBTN_Click(object sender, EventArgs e)
         {
 
         }
