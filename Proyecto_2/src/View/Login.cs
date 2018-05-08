@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Web.Script.Serialization;
+using System.Xml.Serialization;
+using System.IO;
+using System.Xml;
+using Proyecto_2.src.Controller.Conversores;
 
 namespace Proyecto_2.src.View
 {
@@ -69,25 +73,42 @@ namespace Proyecto_2.src.View
             {
                 if(PasswordTXTB.Text!="")
                 {
-                    Usuario user = new Usuario
+                    try
                     {
-                        code= "login",
-                        name = UsernameTXTB.Text,
-                        password = PasswordTXTB.Text,
-                    };
-                    JavaScriptSerializer serializer = new JavaScriptSerializer();
-                    String response=serializer.Serialize(user);
-                    cln.sendMessage(response);
+                        Usuario user = new Usuario
+                        {
+                            code = "login",
+                            name = UsernameTXTB.Text,
+                            password = PasswordTXTB.Text,
+                        };
+                        var serializer = new XmlSerializer(user.GetType());
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", "");
+                        string utf8;
+                        using (StringWriter writer = new Utf8StringWriter())
+                        {
+                            serializer.Serialize(writer,user,ns);
+                            utf8 = writer.ToString();
+                        }
+                        cln.sendMessage(utf8);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                   
                     String respuesta = cln.ReceivedMessage();
+                    Console.WriteLine(respuesta);
                     if(respuesta.ToLower()== "\0\u0004true")
                     {
                         PopLBL.Text = "Succesful login!";
                         this.Refresh();
                         Transition();
                     }
-                    else
+                    else if(respuesta.ToLower() == "\0\u0005false")
                     {
-                        PopLBL.Text = "Unknown user/password!";
+                        PopLBL.Text = "Unknown user or password!";
                         PopLBL.Font = new System.Drawing.Font("hooge 05_55", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     }
 

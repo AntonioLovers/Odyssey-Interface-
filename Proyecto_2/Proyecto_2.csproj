@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Controller\Conversores\MP3toXML.cs" />
+    <Compile Include="src\Controller\Conversores\UTF8.cs" />
     <Compile Include="src\Controller\Dependencias usuario\Usuario.cs" />
     <Compile Include="src\Controller\Dependencias usuario\Cliente.cs" />
     <Compile Include="src\View\Gestor.cs" />

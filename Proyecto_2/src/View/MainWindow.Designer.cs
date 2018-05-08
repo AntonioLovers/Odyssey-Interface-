@@ -238,7 +238,6 @@
             this.CancionesBTN.Text = "Canciones";
             this.CancionesBTN.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.CancionesBTN.UseVisualStyleBackColor = false;
-            this.CancionesBTN.Click += new System.EventHandler(this.CancionesBTN_Click);
             // 
             // SearchBTN
             // 

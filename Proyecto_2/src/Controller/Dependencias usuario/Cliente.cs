@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -10,14 +11,14 @@ namespace Proyecto_2.src.Controller
 {
     public class Cliente
     {
-        private Socket sck;
-        private IPEndPoint remendPoint;
+        private TcpClient sck;
         private Boolean running;
+        private NetworkStream streamer;
         public Cliente()
         {
-            this.sck = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            this.remendPoint = new IPEndPoint(IPAddress.Parse("192.168.100.69"), 9090);
+            this.sck = new TcpClient();
             this.running = true;
+            
         }
         public void Run()
         {
@@ -29,7 +30,8 @@ namespace Proyecto_2.src.Controller
                     try
                     {
                         Console.WriteLine("Connecting....");
-                        sck.Connect(this.remendPoint);
+                        this.sck.Connect("192.168.100.69", 9090);
+                        this.streamer = sck.GetStream();
                         Console.WriteLine("Connected!");
                         Console.WriteLine(ReceivedMessage());
                     }
@@ -48,25 +50,32 @@ namespace Proyecto_2.src.Controller
         {
             try
             {
-                byte[] b = new byte[1654];
-                int k = sck.Receive(b);
-                string Received = Encoding.ASCII.GetString(b, 0, k);
-                return Received;
+                byte[]data = new byte[1654];
+                String received = string.Empty;
+                Int32 bytes = streamer.Read(data, 0, data.Length);
+                received= System.Text.Encoding.UTF8.GetString(data, 0, bytes);
+                return received;
 
 
 
             }
             catch (Exception e)
             {
-                return null;
+                return String.Empty;
             }
         }
         public void sendMessage(string respuesta)
         {
-            byte[] byData = System.Text.Encoding.UTF8.GetBytes(respuesta);
-            sck.Send(byData);
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(respuesta);
+            streamer.Write(data,0,data.Length);
+            streamer.Flush();
 
         } 
+        public void sendLogin(byte[] respuesta)
+        {
+            streamer.Write(respuesta, 0, respuesta.Length);
+            streamer.Flush();
+        }
         public void Stop()
         {
             this.running = false;
