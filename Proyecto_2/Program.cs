@@ -1,4 +1,5 @@
 ﻿using Proyecto_2.src.Controller;
+using Proyecto_2.src.Controller.Conversores;
 using Proyecto_2.src.View;
 using System;
 using System.Threading;
@@ -14,13 +15,14 @@ namespace Proyecto_2
         [STAThread]
         static void Main()
         {
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Gestor gestor = new Gestor();
             gestor.showLogin();
             Application.Run();
-            
+
+
 
 
         }

@@ -91,6 +91,7 @@
             this.PasswordTXTB.Size = new System.Drawing.Size(106, 16);
             this.PasswordTXTB.TabIndex = 3;
             this.PasswordTXTB.UseSystemPasswordChar = true;
+            this.PasswordTXTB.TextChanged += new System.EventHandler(this.PasswordTXTB_TextChanged);
             // 
             // UsernameLBL
             // 
@@ -198,6 +199,7 @@
             this.RegisterBTN.TabIndex = 11;
             this.RegisterBTN.Text = "Not yet an user? Join Now!";
             this.RegisterBTN.UseVisualStyleBackColor = false;
+            this.RegisterBTN.Click += new System.EventHandler(this.RegisterBTN_Click);
             // 
             // Login
             // 

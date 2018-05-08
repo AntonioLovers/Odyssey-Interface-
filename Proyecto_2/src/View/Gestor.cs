@@ -12,6 +12,7 @@ namespace Proyecto_2.src.View
     {
         private Cliente client;
         private Login login;
+        private RegisterWindow reg;
         private MainWindow musicwdw;
 
         public Gestor()
@@ -21,6 +22,7 @@ namespace Proyecto_2.src.View
             cliente.Start();
             this.login = new Login(client,this);
             this.musicwdw = new MainWindow(this);
+            this.reg = new RegisterWindow(this,client);
 
         }
 
@@ -28,13 +30,13 @@ namespace Proyecto_2.src.View
         {
             this.login.Show();
         }
-        public Login getLogin()
-        {
-            return this.login;
-        }
         public void showMain()
         {
             this.musicwdw.Show();
+        }
+        public void showReg()
+        {
+            this.reg.Show();
         }
         public void Stop()
         {

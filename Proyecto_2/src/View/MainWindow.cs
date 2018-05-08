@@ -105,5 +105,10 @@ namespace Proyecto_2
         {
 
         }
+
+        private void CancionesBTN_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

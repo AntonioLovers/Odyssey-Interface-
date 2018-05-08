@@ -22,6 +22,7 @@ namespace Proyecto_2.src.View
     {
         private Cliente cln;
         private Gestor gestor;
+        private String respuesta;
 
         public Login(Cliente cln, Gestor gest)
         {
@@ -75,30 +76,34 @@ namespace Proyecto_2.src.View
                 {
                     try
                     {
-                        Usuario user = new Usuario
+                        cln.sendMessage("login");
+                        respuesta = cln.ReceivedMessage();
+                        Console.WriteLine(respuesta);
+                        if (respuesta == "\0\u0004send")
                         {
-                            code = "login",
-                            name = UsernameTXTB.Text,
-                            password = PasswordTXTB.Text,
-                        };
-                        var serializer = new XmlSerializer(user.GetType());
-                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-                        ns.Add("", "");
-                        string utf8;
-                        using (StringWriter writer = new Utf8StringWriter())
-                        {
-                            serializer.Serialize(writer,user,ns);
-                            utf8 = writer.ToString();
+                            LogU user = new LogU()
+                            {
+                                name = UsernameTXTB.Text,
+                                password = PasswordTXTB.Text,
+                            };
+                            var serializer = new XmlSerializer(user.GetType());
+                            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                            ns.Add("", "");
+                            string utf8;
+                            using (StringWriter writer = new Utf8StringWriter())
+                            {
+                                serializer.Serialize(writer, user, ns);
+                                utf8 = writer.ToString();
+                            }
+                            cln.sendMessage(utf8);
                         }
-                        cln.sendMessage(utf8);
 
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);
                     }
-                   
-                    String respuesta = cln.ReceivedMessage();
+                    respuesta = cln.ReceivedMessage();
                     Console.WriteLine(respuesta);
                     if(respuesta.ToLower()== "\0\u0004true")
                     {
@@ -132,8 +137,19 @@ namespace Proyecto_2.src.View
         private void Transition()
         {
             System.Threading.Thread.Sleep(2000);
-            this.Dispose();
+            this.Hide();
             gestor.showMain();
+        }
+
+        private void RegisterBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            gestor.showReg();
+        }
+
+        private void PasswordTXTB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

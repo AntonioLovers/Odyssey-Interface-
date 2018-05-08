@@ -23,3 +23,4 @@ C:\Users\dcama\Desktop\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.pdb
 C:\Users\dcama\Desktop\Proyecto_2\Proyecto_2\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dcama\Desktop\Proyecto_2\Proyecto_2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dcama\Desktop\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csproj.CopyComplete
+C:\Users\dcama\Desktop\Proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.src.View.RegisterWindow.resources
